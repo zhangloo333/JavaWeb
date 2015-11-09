@@ -1,0 +1,25 @@
+<html>
+ <head>
+  <title>this is all my introduction</title>
+ </head>
+ <body>
+   <font color = #FF1100 size = 5>all the project in this website<font>
+   <form>
+    <!--usr:<input type="text"/><br/>-->
+	    usr:<input type="text" name="user"/><br/>
+
+	password:<input type="password"/></br>
+	sex:<input type="radio" name="man"/>man 
+		<input type="radio"name="women"/>women</br>
+		<input type="checkbox"/>java
+		<input type="checkbox"/>html
+		<input type="checkbox"/>jsp</br>
+		upload file <input type ="file" /></br>
+		button:<input type="button" value="one button"/>
+		<input type="submit"/>
+		<input type="reset"/>
+
+   </form>
+
+ </body>
+</html>

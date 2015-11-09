@@ -1,0 +1,43 @@
+import java.net.*;
+
+/*
+1
+*/
+
+class UdpSend 
+{
+	public static void main(String[] args) throws Exception
+	{
+
+		DatagramSocket dgs = new DatagramSocket();
+
+		byte[] buf = "udp ge men lai le".getBytes();
+		DatagramPacket dp = new DatagramPacket(buf,buf.length,InetAddress.getByName("192.168.1.80"),1000);
+
+		dgs.send(dp);
+
+		dgs.close();
+
+//		System.out.println("Hello World!");
+	}
+}
+
+class UdprRec
+{
+	public static void main(String[] args) throws Exception
+	{
+		DatagramSocket ds = new DatagramSocket(1000);
+
+		byte[] buf = new byte[1024];
+		DatagramPacket dp = new DatagramPacket(buf,buf.length);
+
+		ds.receive(dp);
+
+		String ip = dp.getAddress().getHostAddress();
+		String data = new String(dp.getData(),0,dp.getLength());
+		int port = dp.getPort();
+		System.out.println(ip+"::"+data+"::"+port);
+		ds.close();
+
+	}
+}
